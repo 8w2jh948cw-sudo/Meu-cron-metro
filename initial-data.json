@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 2,
+  "models": [
+    {
+      "id": "364a3d6e-de98-484c-ad4f-68de8f8b00cf",
+      "name": "Manutenção",
+      "createdAt": 1786222772945,
+      "updatedAt": 1786223256201,
+      "deletedAt": null,
+      "timers": [
+        {
+          "id": "7f99cafe-c70c-4750-9506-bd26592ba670",
+          "name": "Remoção",
+          "symbol": " ",
+          "iconColor": "#007aff",
+          "order": 0,
+          "createdAt": 1786222849436,
+          "removedAt": null
+        },
+        {
+          "id": "be165d11-0a07-46a0-bfdc-4b74ec3b7ea5",
+          "name": "Levantamento de cutícula",
+          "symbol": " ",
+          "iconColor": "#007aff",
+          "order": 1,
+          "createdAt": 1786222936686,
+          "removedAt": null
+        },
+        {
+          "id": "7d55058a-3a47-49cb-a80e-ff109ee29c48",
+          "name": "Corte da cutícula",
+          "symbol": " ",
+          "iconColor": "#007aff",
+          "order": 2,
+          "createdAt": 1786222963610,
+          "removedAt": null
+        },
+        {
+          "id": "93e6983c-ec54-4835-be8c-8a5a7ab08f7d",
+          "name": "2º Levantamento",
+          "symbol": " ",
+          "iconColor": "#007aff",
+          "order": 3,
+          "createdAt": 1786223122984,
+          "removedAt": null
+        },
+        {
+          "id": "8ee93d10-6ca8-4c84-aac9-57bcffb877bb",
+          "name": "Primer + Capa base",
+          "symbol": " ",
+          "iconColor": "#007aff",
+          "order": 4,
+          "createdAt": 1786223163495,
+          "removedAt": null
+        },
+        {
+          "id": "dcd89381-cca3-4be2-b130-7328a21fe0fc",
+          "name": "Estrutura",
+          "symbol": " ",
+          "iconColor": "#007aff",
+          "order": 5,
+          "createdAt": 1786223198958,
+          "removedAt": null
+        },
+        {
+          "id": "070be45f-bc6f-4d67-a1b8-c9407e8eb711",
+          "name": "Lixamento",
+          "symbol": " ",
+          "iconColor": "#007aff",
+          "order": 6,
+          "createdAt": 1786223210317,
+          "removedAt": null
+        },
+        {
+          "id": "d3e3dbdc-1a57-4f4a-81cd-8334c85f9aee",
+          "name": "Esmaltação",
+          "symbol": " ",
+          "iconColor": "#007aff",
+          "order": 7,
+          "createdAt": 1786223222787,
+          "removedAt": null
+        },
+        {
+          "id": "af356cee-e4a7-4fb7-b9f1-a3e23c9f0df2",
+          "name": "Top Coat",
+          "symbol": " ",
+          "iconColor": "#007aff",
+          "order": 8,
+          "createdAt": 1786223243057,
+          "removedAt": null
+        },
+        {
+          "id": "e5075801-ab4f-4a74-8796-93247991df7c",
+          "name": "Encerramento",
+          "symbol": " ",
+          "iconColor": "#007aff",
+          "order": 9,
+          "createdAt": 1786223256201,
+          "removedAt": null
+        }
+      ],
+      "sortOrder": 0
+    }
+  ]
+}

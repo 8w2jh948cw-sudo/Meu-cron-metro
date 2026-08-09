@@ -46,3 +46,11 @@ Não há sincronização automática com iCloud ou entre aparelhos. O JSON agora
 - `sw.js` — cache offline
 - `icon.svg` — ícone
 - `AI_RULES_MIN.txt` — regras para futuras edições por IA
+
+
+## Developer Edition v0.4
+Painel reorganizado por componentes, com prévia ao vivo, controles +/- e Snapshots visuais.
+
+
+## v0.5.0-dev.0
+Modo desenvolvedor unificado e escondido em Ajustes; Snapshots versionados com resumo de alterações; seleção temporária de componentes na tela; exportação de distribuição/limpa/nova base Developer; ajuda contextual nos ajustes menos óbvios.
