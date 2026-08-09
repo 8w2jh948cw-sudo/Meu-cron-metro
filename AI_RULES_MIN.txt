@@ -1,0 +1,21 @@
+CRONOMETRO / AI_RULES_MIN v2
+PRIORIDADE: pedido explícito atual do usuário > estas regras > código atual. Não alterar fora do pedido.
+
+ARQ=PWA iPhone; HTML+CSS+JS puro; GitHub Pages HTTPS; local/offline-first; IndexedDB+Service Worker; sem React/Expo/TS/npm/backend/login/assinatura/cloud pago. Não migrar stack sem pedido.
+DB=cronometro_local_v1; stores=models,sessions,state. NUNCA reset/apagar DB para corrigir bug. Schema novo=>migração compatível; preservar IDs/dados/URL.
+UPDATE=preservar IndexedDB; se assets mudarem, atualizar CACHE em sw.js e remover caches antigos.
+
+TIMER=sempre 1 por vez. Fonte verdade=timestamps+intervalos persistidos, nunca +1s. Tocar ativo=>parar; tocar parado=>retomar acumulado; tocar outro=>fecha atual+inicia outro no mesmo instante. Sem timer ativo depois do 1º início=>intervalo de pausa; ao retomar/trocar encerra pausa. Tempo total da tela=soma timers, nunca inclui pausas. Salvar fecha timer/pausa abertos, cria 1 registro, zera sessão, mantém modelo. Recuperar sessão após reload/background por timestamps.
+TITULO=sem título manual: `(sem título) DD/MM/AAAA • HH:mm`; não perguntar ao iniciar. Renomear registro atual só via toque no título. Menu do título=Renomear/Editar modelo/Zerar e descartar.
+
+MODELOS=acesso pela seta circular esquerda da tela Cronômetros; página Modelos com criar, modo Editar/reordenar, menu por modelo=Renomear/Editar/Duplicar/Apagar. IDs estáveis; duplicar=>IDs novos; restauração<30d=>mesmos IDs; exclusão lógica 30d; timer removido preserva histórico; registro aberto não muda estrutura ao editar modelo.
+HIST=sem medição exige nota e não entra stats; apagados não entram stats; restaurado volta ao período original; correção recalcula métricas sem exibir valor anterior.
+STATS=não duplicar registros; melhor=menor válido; pior=maior; etapas novas só após inclusão; removidas preservam histórico enquanto modelo existir.
+
+EXPORT=CSV normalizado; PDF; JSON completo schemaVersion atual. IMPORT JSON=restauração de backup: validar+confirmar; SUBSTITUI dados atuais, não mesclar; preservar compatibilidade com JSONs anteriores quando possível.
+
+UI=pt-BR; iPhone vertical; visual iOS atual/Liquid Glass. Tema Sistema/Claro/Escuro. Claro: bg/tab #F2F2F6, cards #FFF, modelo #8F8F8F, footer #85858A. Escuro=equivalentes iOS. Destaques usam cor escolhida em Ajustes. Header Cronômetros fino, bg=background, sem borda, sticky cobrindo cards. Título sem nome menor. Total em card flutuante com relógio. Sem botão global Pausar. Tabbar ícones maiores, horizontal scroll se necessário.
+SHEETS=bottom sheet full-width, backdrop ~13%, bg var(--bg), corners ~52px; header título 20 bold; controles circulares glass ~52px; cards inset grouped margem18 radius30, sem sombra/borda; rows ~56, separator #E7E7E8; fonte system/SF; placeholder #C5C5C7. Popovers: fechar ao tocar fora; sombra difusa mínima+borda branca fina. Settings=inset grouped; footer fora do card 14–15px line-height 18–20. Toggle, se usado: track72x32 r16 ON#65C466 OFF#C5C5C7 thumb35x28 branco. Sem Material, emoji, sombra forte ou controle HTML sem estilização.
+
+SEGURANCA=alterar só necessário; não remover/simplificar silenciosamente. Se conflito de requisitos, perguntar qual prevalece antes de aplicar. Não afirmar teste real iPhone/offline sem testar.
+ARQUIVOS_RUNTIME=index.html,app.js,styles.css,sw.js,manifest.webmanifest,icon.svg. DOC=README.md. Este arquivo acompanha edição por IA.
